@@ -6,10 +6,8 @@ import FilterSection from "./FilterSection";
 import AllRecipes from "./AllRecipes";
 
 const Home = () => {
-  const recipes = useSelector((state) => state.recipes.recipes);
   const status = useSelector((state) => state.recipes.status);
   const featuredRecipes = useSelector((state) => state.recipes.featured);
-  const error = useSelector((state) => state.recipes.error);
   const [sliderIndex, setSliderIndex] = useState(0);
   const dispatch = useDispatch();
 
@@ -19,7 +17,6 @@ const Home = () => {
     }
   }, [status, dispatch]);
 
-  console.log(recipes);
   const nextSlide = () => {
     setSliderIndex((prevIndex) =>
       prevIndex === featuredRecipes.length - 1 ? 0 : prevIndex + 1
@@ -33,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <section className="mt-3 pt-16 w-full  h-full">
+    <section className="mt-3 pt-24 sm:pt-16 w-full  h-full">
       <section className="flex flex-col items-center justify-center">
         <div className="relative w-[95%] h-1/2 overflow-hidden">
           <div className="flex transition-transform duration-500 ease-in-out">

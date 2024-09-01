@@ -15,7 +15,6 @@ const EditRecipeModal = ({ isOpen, onClose, recipe, setRecipe }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("called");
     if (recipe) {
       setFormData({
         name: recipe.name || "",
@@ -64,7 +63,7 @@ const EditRecipeModal = ({ isOpen, onClose, recipe, setRecipe }) => {
       dispatch(
         updateRecipes({ id: recipe._id, updatedRecipe: updatedRecipe.data })
       );
-
+      alert("Recipe Updated sucessfully");
       onClose();
       setRecipe(updatedRecipe.data); // Update parent state if necessary
     } catch (error) {

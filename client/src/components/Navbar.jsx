@@ -19,22 +19,12 @@ const Navbar = () => {
             alt="Logo"
             className="h-10 rounded-md opacity-90 "
           />
-          <span className="ml-3 text-2xl font-semibold">MyApp</span>
+          <span className="ml-3 text-2xl font-semibold">Hot-Cook</span>
         </Link>
-        <ul className=" md:flex space-x-6 text-white">
+        <ul className="sm:flex space-x-6 ml-7 text-white">
           <li>
-            <Link to="/review" className="hover:text-gray-400">
-              Review
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-gray-400">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile" className="hover:text-gray-400">
-              Profile
+            <Link to="/addrecipe" className="hover:text-gray-400">
+              Add Recipe
             </Link>
           </li>
         </ul>
@@ -57,20 +47,13 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-        <ul className="flex flex-col space-y-4 p-4 bg-gray-800 text-white">
+        <ul className="flex flex-col space-y-2 p-4 bg-gray-800 text-white">
           <li>
-            <Link to="/review" className="block hover:bg-gray-700 p-2 rounded">
-              Review
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="block hover:bg-gray-700 p-2 rounded">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile" className="block hover:bg-gray-700 p-2 rounded">
-              Profile
+            <Link
+              to="/addrecipe"
+              className="block hover:bg-gray-700 p-2 rounded"
+            >
+              Add Recipe
             </Link>
           </li>
         </ul>

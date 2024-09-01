@@ -28,7 +28,11 @@ const SingleRecipe = () => {
   };
 
   if (!recipe) {
-    return <div className="mt-3 pt-16 w-full text-center">...loading</div>;
+    return (
+      <div className="mt-3 pt-24 sm:pt-16 w-full h-full text-center">
+        ...loading
+      </div>
+    );
   }
 
   return (
