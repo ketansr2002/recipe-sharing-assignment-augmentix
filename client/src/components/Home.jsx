@@ -8,7 +8,7 @@ import AllRecipes from "./AllRecipes";
 const Home = () => {
   const status = useSelector((state) => state.recipes.status);
   const featuredRecipes = useSelector((state) => state.recipes.featured);
-  const [sliderIndex, setSliderIndex] = useState(0);
+  const [sliderIndex, setSliderIndex] = useState(1);
   const dispatch = useDispatch();
 
   useEffect(() => {

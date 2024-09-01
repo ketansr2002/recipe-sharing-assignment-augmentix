@@ -65,15 +65,11 @@ const AddRecipe = () => {
     };
 
     try {
-      const response = await axios.post(
-        "http://localhost:3030/api/recipes",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      await axios.post("http://localhost:3030/api/recipes", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       alert("Recipe created successfully!");
       navigate("/");
     } catch (error) {
